@@ -3,8 +3,8 @@
 On this session we'll build a game of Mastermind with TypeScript and micro-pairing.
 
 ## Table of contents
+- [Coding Challenge - Mastermind](#coding-challenge---mastermind)
 - [Getting started with this repository](#getting-started-with-this-repository)
-- [Coding Challenge - Mastermind](#coding-challenge---mars-rover-kata)
   - [Description](#description)
   - [Rules](#rules)
   - [Challenge Tasks](#challenge-tasks)
@@ -13,13 +13,24 @@ On this session we'll build a game of Mastermind with TypeScript and micro-pairi
   - [Red-Green-Refactor](#red-green-refactor)
   - [Cycle steps as design opportunities](#cycle-steps-as-design-opportunities)
   - [TDD side effects](#tdd-side-effects)
-- [Ping-Pong Pair Programming](#ping-pong-pair-programming)
+- [Micro-Pairing](#micro---pairing)
 - [JavaScript Testing](#javascript-testing)
   - [Writing tests](#writing-tests)
   - [Asserting](#asserting)
     + [Errors](#errors)
   - [Filenames](#filenames)
-  
+
+## Coding Challenge - Mastermind
+TBD
+
+### Description
+TBD
+
+### Rules.
+TBD
+
+### Requeriments
+TBD
 
 ## Getting started with this repository
 You'll need [Node.Js](https://nodejs.org/) installed to be able to utilize this repository.
@@ -29,29 +40,6 @@ After cloning, run `npm install` on the root of this repository to install all n
 To run tests, you can use the `npm run test` command. If you want to enable file watch, so the tests re-run automatically after saving a file, you can use the `npm run test:watch` command.
 
 The test framework is configured to look for files inside of the `src` folder and to look for test files with the `.spec.js` extension.
-
-## Coding Challenge - Mars Rover Kata
-[Original kata](https://kata-log.rocks/mars-rover-kata)
-
-### Description
-You’re part of the team that explores Mars by sending remotely controlled vehicles to the surface of the planet. Develop an API that translates the commands sent from earth to instructions that are understood by the rover, and returns the rovers new position after the command execution is done.
-
-### Rules.
-- TDD all the way. Keep working on the Red-Green-Refactor cycle through the session.
-- Do one task at a time. The trick is to learn to work incrementally.
-- Make sure you only test for correct inputs. Incorrect inputs and exceptions can be handled as an extra after the main tasks are done.
-
-### Requeriments
-- The rover starts on a given X and Y coordinates and facing a given direction (ex.: `X: 0, Y:0, Direction: North`).
-- It should receive an string with a list of commands. The possible commands are:
-    + Translation: `F` to move forwards, `B` to move backwards.
-    + Rotation: `L` to rotate left and `R` to rotate right.
-    + The command input will be something like `FFBBLRLR`.
-- The rover should execute all commands in the informed string and, when its done, return its new position containing X and Y coordinates and the direction it's facing.
-- Implement the wrap around behaviour, when the rover reaches the edge of the map it should appear on the other side like it's just finishing a round trip on the planet.
-    + The map has a set Height and Width.
-- Implement colision detection.
-    + When a movement would make the rover hit an obstacle, the Rover should stop executing and inform that it found an obstacle.
 
 ## How to pair program remotely
 There are a couple of ways we can share the Pilot/Co-pilot seat remotely.
@@ -89,16 +77,17 @@ This approach to development has some side effects:
 - It gives developers a safe net of automated tests, which facilitates refactoring the code throughout its lifespan.
 - Tests can be a good way to document the intended behaviour of the code.
 
-## Ping-Pong Pair Programming
-In this session, we're trying out the "Ping-Pong" style of pair programming.
-The idea is that both participants in the pair take turns as the driver on every new failing test (Red step on the TDD cycle).
+## Micro-Pairing
+Very similar to the Ping Pong, but in this case the participants switch places on every step of the TDD cycle. In this mode, after one of the participants made the test pass the other one may choose to refactor or to write another test, in such a way that the refactor step is made in bulk in a later step.
 
-- A Writes a test and sees it failing
-- B Writes the code needed to make the test pass
-- B Refactors the code as needed
-- B Writes a new failing test
-- A Writes the necessary code to make the test pass
-- ...
+A Writes a test and sees it failing
+B Writes the code needed to make the test pass
+A Writes another failing test
+B Writes the code needed to make the test pass
+A Refactors the code
+B Writes a failing test
+A Writes the code needed to make the test pass
+...
 
 ## TypeScript Testing
 In this repository, we're using [Jest](https://jestjs.io/en/) as our test framework.
