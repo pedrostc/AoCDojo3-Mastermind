@@ -3,7 +3,7 @@
 On this session we'll build a game of Mastermind with TypeScript and micro-pairing.
 
 ## Table of contents
-- [Coding Challenge - Mastermind](#coding-challenge---mastermind)
+- [Coding Challenge - Mastermind](CHALLENGE.md)
 - [Getting started with this repository](#getting-started-with-this-repository)
   - [Description](#description)
   - [Rules](#rules)
@@ -19,18 +19,6 @@ On this session we'll build a game of Mastermind with TypeScript and micro-pairi
   - [Asserting](#asserting)
     + [Errors](#errors)
   - [Filenames](#filenames)
-
-## Coding Challenge - Mastermind
-TBD
-
-### Description
-TBD
-
-### Rules.
-TBD
-
-### Requeriments
-TBD
 
 ## Getting started with this repository
 You'll need [Node.Js](https://nodejs.org/) installed to be able to utilize this repository.
