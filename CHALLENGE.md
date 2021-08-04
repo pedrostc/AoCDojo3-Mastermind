@@ -2,13 +2,13 @@
 The game where one player, the mastermind, has to choose a secret combination of coloured pegs. Then the second player, the codebreaker, tries to guess the code. The mastermind provides feedback to each guess of the codebreaker, indicating the number of well-placed and misplaced colours.
 
 ## Rules
-1. The Mastermind needs to be set up with a code of 4 colours. The colours are randomly selected from ["red", "blue", "green", "orange", "purple", "yellow"]. Duplicated colours are allowed, but there can only be always exactly 4.
-2. The Mastermind will return an array to you. For every correctly positioned colour in the guess, a "black" piece is added to the array. For each correct colour but in the wrong position, a "white" piece is added to the array. If the guessed colour is not on the code, nothing will be added to the array for that given element. Note that the guess also should always have four elements.
+1. The Mastermind needs to be set up with a code of 4 colours. The colours are randomly selected from ["red", "blue", "green", "orange", "purple", "yellow"]. Duplicated colours are allowed, but the code must be exactly 4 colours in length.
+2. The Mastermind will return an array to you. When you make a guess, for every correctly positioned colour in the guess, a "black" piece is added to the array. For each correct colour but in the wrong position, a "white" piece is added to the array. If the guessed colour is not on the code, nothing will be added to the array for that given element. Note that the guess should always have four elements.
 3. Passing the correct array will pass the Kata test and return "WON!".
 4. Passing an invalid colour will fail the test with the error "Error: you have given an invalid colour!"
 5. Passing an invalid array length should fail with the error "Error: you must pass 4 colours!"
 6. Guessing more than 10 times should fail with the error "Error: you have had more than 10 tries!"
-7. The return array elements should not be in any particular order. The returned array should be shuffled.
+7. The returned array elements from the Mastermind should not be in any particular order. The returned array should be shuffled.
 
 ## Tasks
 Your task is to create a game of mastermind that follows the rules described in the previous section. The game should be initialized with one code to be broken, and there should be a method to check the guesses with.
