@@ -1,4 +1,4 @@
-import { CodeColours, HintColours } from '../Constants/Constants'
+import { CodeColours, HintColours } from '../constants/constants'
 
 export default class Mastermind {
 
