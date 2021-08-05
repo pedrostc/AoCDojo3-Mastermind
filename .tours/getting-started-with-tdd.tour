@@ -1,0 +1,66 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Getting started with TDD",
+  "steps": [
+    {
+      "file": "src/Mastermind/Mastermind.spec.ts",
+      "description": "### Getting started\r\nWelcome to the 3rd edition of our Art of Code dojo. Today we will create a game of \"Mastermind\".\r\n\r\nFirst of all lets install all necessary dependencies for our project by running:\r\n\r\n>> npm install",
+      "line": 1
+    },
+    {
+      "file": "src/Mastermind/Mastermind.spec.ts",
+      "description": "### Setting up our first test.\r\n\r\nOne of the goals is to use TDD to write our code, so let's start by writting our first test.\r\n\r\nOn Typescript/Javascript we can organize our tests by category by using the `describe` function. This function receives 2 arguments:\r\n- a `string` which identifies the test group\r\n- a `function` where we'll write our test",
+      "line": 4
+    },
+    {
+      "file": "src/Mastermind/Mastermind.spec.ts",
+      "description": "### Defining the test\r\n\r\nTo write a test we use the `test` function that has the same signature as the `describe` one that we've just used:\r\n- a `string` with the name of the test.\r\n- a `function` with the actual test code.",
+      "line": 5
+    },
+    {
+      "file": "src/Mastermind/Mastermind.spec.ts",
+      "description": "### The Red state - Writing our test\n\nOn TDD we use the \"red-green-refactor\" cycle to create our code. I'll explain each step as we go.\n\nThe first step is the **RED** one. On this step we'll write a test that fails. The test may fail for any reason, not just because of a failling assertion. Ex.: The code my not compile because you're trying to use a function that doesn't exist yet.\n\nOn this step our focus is to design how our code API will look like. For example, we'll think on what functions we will need, what arguments those functions will receive, and what should be the returned value of those functions.\n\nHere we went ahead and created the first piece of the test.\n\nOn line 5 we're instantiating our game (that's defined on the [Mastermind.ts](./src/Mastermind/Mastermind.ts) file.).\n\nOn line 7 we've added an assertion where we expect that the `secretCode` property of our game is populated with the code we've passed in.",
+      "line": 9,
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 1
+        },
+        "end": {
+          "line": 9,
+          "character": 49
+        }
+      }
+    },
+    {
+      "file": "src/Mastermind/Mastermind.spec.ts",
+      "description": "### Running the tests\r\n\r\nLets [save the file](command:workbench.action.files.save) and running the following command on your terminal to see if our test passes:\r\n\r\n>> npm test",
+      "line": 7
+    },
+    {
+      "file": "src/Mastermind/Mastermind.ts",
+      "description": "### The Green step - making our tests pass\r\n\r\nNow that we have a failing test, we'll move to the **GREEN** step, which means we just want to make the test pass as fast as possible. On this step, we don't care much about code quality or design, we just want to make the code pass.\r\n\r\nHere we'll think about the logic necessary to implement the behaviour we need on our code. In our current case it's easy enough, we'll add a parameter to our constructor and set the `secretCode` property with it.\r\n\r\n```typescript\r\nconstructor(code: string[]) {\r\n    this.secretCode = code;\r\n}\r\n```\r\n\r\nWe can verify that our test passes by running the following command again (Don't forget to [save your changes first](command:workbench.action.files.save)):\r\n\r\n>> npm test",
+      "line": 8,
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 3
+        },
+        "end": {
+          "line": 8,
+          "character": 4
+        }
+      }
+    },
+    {
+      "file": "src/Mastermind/Mastermind.ts",
+      "description": "### The Refactor step - Cleaning up our ~messy~ code.\r\n\r\nNow we move to the **REFACTOR** step. On this step is when we'll clean our code from duplications, properly design it, apply patterns and so on.\r\n\r\nOn this step we want to make sure that we don't break any tests. If a test breaks after our refactoring, that means that we broke the intended behaviour of our code. In that case we should go back and fix that.\r\n\r\nRight now we don't have much to refactor, so let's leave the code as is for now and restart the cycle, going to the next **RED** step.",
+      "line": 9
+    },
+    {
+      "file": "src/Mastermind/Mastermind.spec.ts",
+      "description": "### Some tips moving forward\r\n\r\n- [Our ACs](./CHALLENGE.md) are a great source of test ideas.\r\n\r\n- You can check out the [Testing in Typescript](./docs/testing-in-typescript.md) file on the `docs` folder for more testing examples and techniques.\r\n\r\n- Another option to run the tests automatically after you save a file is by using the following command:\r\n>> npm run test:watch\r\n\r\n  + This command will run the tests in *watch* mode, and the tests should re-run every time you [save your changes](command:workbench.action.files.save).\r\n\r\n- The [Readme file](./README.md) indexes the available documentation for this session.",
+      "line": 11
+    }
+  ]
+}
