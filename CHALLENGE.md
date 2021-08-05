@@ -13,6 +13,7 @@ The game where one player, the mastermind, has to choose a secret combination of
 ## Tasks
 Your task is to create a game of mastermind that follows the rules described in the previous section. The game should be initialized with one code to be broken, and there should be a method to check the guesses with.
 Pay attention to edge cases and exceptions.
+After the game is done, implement a code to generate the initial `secret code` automatically and integrate it with the game.
 (Extra objective) Now that you have a working game of mastermind, design and implement the code to play and beat the game.
  - You can start by allowing more than 10 tries at first.
  - When you have a working algorithm, try to optimize it so the game is beat in as few guesses as possible.
