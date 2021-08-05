@@ -15,7 +15,7 @@ You'll need [Node.Js](https://nodejs.org/) installed to be able to utilize this 
 
 We recommend the use of VS Code on this session. This repo has some recommended extensions that will help you throughout the session. To find them search by `@recommended` on the **Extensions** menu, and see the **Workspace Recommendations** tab.
 
-This repo has a tutorial that can help you getting started with the session, to use it you need the **CodeTour** extension. After that extension is installed you will find the tutorial under the **CODETOUR** tab in the **Explorer** menu.
+This repo has a tutorial that can help you getting started with the session, to use it you need the [Codetour extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour). After that extension is installed you will find the tutorial under the **CODETOUR** tab in the **Explorer** menu.
 
 After cloning, run `npm install` on the root of this repository to install all necessary dependencies.
 
