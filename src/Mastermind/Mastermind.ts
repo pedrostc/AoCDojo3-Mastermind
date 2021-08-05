@@ -4,7 +4,7 @@ export default class Mastermind {
 
   secretCode: string[] = null;
 
-  constructor(code: string[]) {
+  constructor() {
   }
 
 }
